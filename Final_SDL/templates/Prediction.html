@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Prediction</title>
+	<link rel = "icon" href = 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQDKinedwOf8hl_g_HyQ53NuunuW3xX1psyg&usqp=CAU" 
+        type = "image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Accordions represent collapsable component with extended functionality.">
+    <meta name="msapplication-tap-highlight" content="no">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buttons.css') }}">
+<script src="{{url_for('static', filename='main.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+
+<body>
+ 
+     <div class="app-header header-shadow", style="background-color:#FFE0B2">
+           
+           
+                <div class="app-header__content">
+               
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                
+								<div class="widget-content-right header-user-info ml-3">
+                                    <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        LOGIN
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>        </div>
+            </div>
+        </div>
+    <div class="app-main">
+                <div class="app-sidebar sidebar-shadow">
+                    <div class="app-header__logo">
+                        <div class="logo-src"></div>
+                        <div class="header__pane ml-auto">
+                            <div>
+                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-header__mobile-menu">
+                        <div>
+                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="app-header__menu">
+                        <span>
+                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                            </button>
+                        </span>
+                    </div>  
+                    <div class="scrollbar-sidebar", style="background-color:powderblue;">
+                        <div class="app-sidebar__inner">
+                        <div style="font-family:Apple Chancery, cursive">
+                              <hr>
+                              <h5>DASHBOARD</h5>
+                              <hr>
+                        
+                        </div>
+                              <ul class="vertical-nav-menu">
+                                <li class="app-sidebar__heading">Distribution</li>
+                                <li>
+                                    <a href="{{ url_for('distribution')}}">
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Price Distribution
+                                    </a>
+                                </li>
+                                <li class="app-sidebar__heading">Relations</li>
+                                <li
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                >
+                                    <a href="#">
+                                        <i class="metismenu-icon pe-7s-diamond"></i>
+                                        Price Relations
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    >
+                                        <li>
+                                            <a href="{{ url_for('price_vs_fuel')}}">
+                                                <i class="metismenu-icon"></i>
+                                                Fuel and Cylinders
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('price_vs_transmission')}}"  >
+                                                <i class="metismenu-icon">
+                                                </i>Transmission,Drive and Size
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('price_vs_manufacturer')}}" >
+                                                <i class="metismenu-icon">
+                                                </i>Manufacturer and Type
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('price_vs_condition')}}" >
+                                                <i class="metismenu-icon">
+                                                </i>Condition and Title-Status
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('price_vs_year')}}"  >
+                                                <i class="metismenu-icon">
+                                                </i>Year of Manufacturer
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li
+                                    
+                                     
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                >
+                                    <a href="#">
+                                        <i class="metismenu-icon pe-7s-car"></i>
+                                        No. of Cars Relations
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ url_for('number_vs_fuel')}}">
+                                                <i class="metismenu-icon"></i>
+                                                Fuel and Cylinders
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="{{ url_for('number_vs_transmission')}}">
+                                                <i class="metismenu-icon">
+                                                </i>Transmission,Drive and Size
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('number_vs_manufacturer')}}">
+                                                <i class="metismenu-icon">
+                                                </i>Manufacturer and Type
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('number_vs_condition')}}">
+                                                <i class="metismenu-icon">
+                                                </i>Condition and Title-Status
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('number_vs_year')}}">
+                                                <i class="metismenu-icon">
+                                                </i>Year of Manufacturer
+                                            </a>
+                                        </li> 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                    </ul>
+                                </li>
+
+
+                      
+                            </ul>
+                        
+                                    <div>
+                                    <br><hr>
+                                    <i class='fas fa-home', style='font-size:20px'></i>
+                                    <b><a href="{{ url_for('home')}}">Go to Home</a></b>
+                                    </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="app-main__outer">
+                    <div class="app-main__inner", style="background-color:black">
+                        <div class="app-page-title" , style="background-color:#ff8a65">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div class="page-title-icon" style="background-color:hsl(42deg 82% 63% / 50%);">
+                                        <i class='fas fa-car' style='font-size:24px'>
+                                        </i>
+                                    </div>
+                                    <div><h2>Know the Resale Price of Your Vehicle</h2>
+                                    </div>
+                                </div>
+                              <!--  <div class="page-title-actions">
+                                    <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
+                                        <i class="fa fa-star"></i>
+                                    </button>
+                                    <div class="d-inline-block dropdown">
+                                        <h3>
+                                    <a href="Predictions.html">Predictions</a>
+                                        </h3>   
+                                    </div>
+                                </div> --> 
+                            </div>
+                        </div>      
+					<div class="" >
+                        <div class="container" style="background-color:black">
+                            <form method="POST", action="{{url_for('predict')}}">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Manufacturer">Manufacturer</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Manufacturer" name="Manufacturer">
+										    <option value="Land Rover">Land Rover</option>
+                                            <option value="Toyota">Toyota</option>
+                                            <option value="mini">Mini</option>
+                                            <option value="Jeep">Jeep</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Dodge">Dodge</option>
+                                            <option value="Chevrolet">Chevrolet</option>
+                                            <option value="Ford">Ford</option>
+                                            <option value="Honda">Honda</option>
+                                            <option value="Nissan">Nissan</option>
+                                            <option value="Subaru">Subaru</option>
+                                            <option value="GMC">GMC</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                            <option value="KIA">KIA</option>
+                                            <option value="Acura">Acura</option>
+                                            <option value="RAM">RAM</option>
+                                            <option value="Chrysler">Chrysler</option>
+                                            <option value="Hyundai">Hyundai</option>
+                                            <option value="Cadillac">Cadillac</option>
+                                            <option value="VOLVO">VOLVO</option>
+                                            <option value="Mercedes-benz">Mercedes-benz</option>
+                                            <option value="AUDI">AUDI</option>
+                                            <option value="Cadillac">Infiniti</option>
+                                            <option value="Mazda">Mazda</option>
+                                            <option value="Buick">Buick</option>
+                                            <option value="Mitsubishi">Mitsubishi</option>
+                                            <option value="Rover">Rover</option>
+                                            <option value="Pontiac">Pontiac</option>
+                                            <option value="Lincoln">Lincoln</option>
+                                            <option value="Lexus">Lexus</option>
+                                            <option value="FIAT">FIAT</option>
+                                            <option value="Jaguar">Jaguar</option>
+                                            <option value="Mercury">Mercury</option>
+                                            <option value="Saturn">Saturn</option>
+                                            <option value="Tesla">Tesla</option>
+                                            <option value="Harley-Davidson">Harley-Davidson</option>
+                                            <option value="Ferrari">Ferrari</option>
+                                            <option value="Porche">Porche</option>
+                                            <option value="Alfa-Romeo">Alfa-Romeo</option>
+                                            <option value="Morgan">Morgan</option>
+                                            <option value="Aston-Martin">Aston-Martin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Model">Model</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="Model" name="Model" placeholder="Model name..">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Year">Year</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="Year" name="Year" placeholder="Year of Manufacturing">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="condition">Condition</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="condition" name="condition">
+                                            <option value="Excellent">Excellent</option>
+                                            <option value="Good">Good</option>
+                                            <option value="Like New">Like New</option>
+                                            <option value="Fair">Fair</option>
+                                            <option value="New">New</option>
+                                            <option value="Salvage">Salvage</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               <div class="row">
+                                    <div class="col-25">
+                                        <label for="Cylinders">Cylinders</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Cylinders" name="Cylinders">
+                                            <option value="3 Cylinders">3 Cylinders</option>
+                                            <option value="4 Cylinders">4 Cylinders</option>
+                                            <option value="5 Cylinders">5 Cylinders</option>
+                                            <option value="6 Cylinders">6 Cylinders</option>
+                                            <option value="8 Cylinders">8 Cylinders</option>
+                                            <option value="10 Cylinders">10 Cylinders</option>
+                                            <option value="12 Cylinders">12 Cylinders</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Fuel">Fuel</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Fuel" name="Fuel">
+                                            <option value="Gas">Gas</option>
+                                            <option value="Diesel">Diesel</option>
+                                            <option value="Electric">Electric</option>
+                                            <option value="Hybrid">Hybrid</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Odometer">Odometer</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="Odometer" name="Odometer" placeholder="Enter Value in numbers">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Transmission">Transmission</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Transmission" name="Transmission">
+                                            <option value="Automatic">Automatic</option>
+                                            <option value="Manual">Manual</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Title-Status">Title-Status</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Title-Status" name="Title-Status">
+                                            <option value="Clean">Clean</option>
+                                            <option value="Rebuilt">Rebuilt</option>
+                                            <option value="Salvage">Salvage</option>
+                                            <option value="Lien">Lien</option>
+                                            <option value="Missing">Missing</option>
+                                            <option value="Parts only">Parts only</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Drive">Drive</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Drive" name="Drive">
+                                            <option value="4wd">4wd</option>
+                                            <option value="RWD">RWD</option>
+                                            <option value="FWD">FWD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Size">Size</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Size" name="Size">
+                                            <option value="Full-Size">Full-Size</option>
+                                            <option value="Mid-Size">Mid-Size</option>
+                                            <option value="Sub-Compact">Sub-Compact</option>
+                                            <option value="Compact">Compact</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Type">Type</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Type" name="Type">
+                                            <option value="Offroad">Offroad</option>
+                                            <option value="Sedan">Sedan</option>
+                                            <option value="Pickup">Pickup</option>
+                                            <option value="Convertible">Convertible</option>
+                                            <option value="Van">Van</option>
+                                            <option value="Truck">Truck</option>
+                                            <option value="SUV">SUV</option>
+                                            <option value="Coupe">Coupe</option>
+                                            <option value="Hatchback">Hatchback</option>
+                                            <option value="Mini-Van">Mini-Van</option>
+                                            <option value="Wagon">Wagon</option>
+                                            <option value="BUS">BUS</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="Paint_Color">Paint_Color</label>
+                                    </div>
+                                    <div class="col-75" title="Select">
+                                        <select id="Paint_Color" name="Paint_Color">
+                                            <option value="Silver">Silver</option>
+                                            <option value="Grey">Grey</option>
+                                            <option value="Red">Red</option>
+                                            <option value="White">White</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Blue">Blue</option>
+                                            <option value="Green">Green</option>
+                                            <option value="Brown">Brown</option>
+                                            <option value="Yellow">Yellow</option>
+                                            <option value="Orange">Orange</option>
+                                            <option value="Custom">Custom</option>
+                                            <option value="Purple">Purple</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+					 </div>
+                </div>
+            <div class="app-wrapper-footer" >
+                        <div class="app-footer" >
+                            <div class="app-footer__inner" style="background-color:#FFE0B2">
+                                <div class="app-footer-left">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="{{ url_for('about')}}" class="button">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="mailto:sdl062020@gmail.com" class="button">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="app-footer-right">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            &nbsp &nbsp  Follow us
+                                            <h2>
+                                            <a href="https://www.facebook.com/car.hub.758"  class="fa  fa-facebook" target="_blank"></a>
+                                            <a href="https://twitter.com/CarsHub3?s=08" class="fa fa-twitter" target="_blank"></a>
+                                                <a href="https://www.instagram.com/invites/contact/?i=1173uc1o43dg6&utm_content=klezcs3" class="fa fa-instagram" target="_blank"></a></h2>
+                                        </li>
+                                        <li class="nav-item">
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+               </div> 
+              
+        </div>
+   
+</body>
+</html>

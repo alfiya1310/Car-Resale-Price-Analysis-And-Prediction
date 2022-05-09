@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us</title>
+<link rel = "icon" href = 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQDKinedwOf8hl_g_HyQ53NuunuW3xX1psyg&usqp=CAU" 
+        type = "image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buttons.css') }}">
+<script src="{{url_for('static', filename='main.js')}}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+<body style="background-color: #fff3e0">
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>This is a project for Used car price prediction and Visualization of the data.</p>
+  <p>It was created using Random forest Regression Algorithm and Matplotlib for plotting insights of Data.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div style="text-align:center">
+      <img src="{{ url_for('static', filename='images/sans.jpg')}}" alt="Sanskruti" width="200" height="200" align="center">
+      </div>
+        <div class="container">
+        <h2>Sanskruti Ghadipatil</h2>
+        <p class="title">Sinhgad College of Engineering</p>
+        <p>TE2</p>
+		<p>Rollno. 305B017</p>
+        <p>Prn. 71906632J</p>
+        <p>sanskrutingp06@gmail.com</p>
+        <p><a href="mailto:sanskrutingp06@gmail" class="button">Contact</a></p>
+                                        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div style="text-align:center">
+      <img src="{{ url_for('static', filename='images/alfiya.jpg')}}" alt="Alfiya" width="200" height="200" >
+      </div>
+        <div class="container">
+        <h2>Alfiya Khan</h2>
+        <p class="title">Sinhgad College of Engineering</p>
+        <p>TE2</p>
+		<p>Rollno. 305B029</p>
+        <p>Prn. 71906278M</p>
+        <p>alfiyakhan886@gmail.com</p>
+        <p><a href="mailto:alfiyakhan886@gmail.com" class="button">Contact</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div style="text-align:center">
+      <img src="{{ url_for('static', filename='images/prathmesh.jpg')}}" alt="Prathamesh" width="200" height="200" align="center">
+      </div>
+        <div class="container">
+        <h2>Prathmesh Jadhav</h2>
+        <p class="title">Sinhgad College of Engineering</p>
+        <p>TE2</p>
+		<p>Rollno. 305B025</p>
+        <p>Prn. 71906632J</p>
+        <p>jadhavmaharu31@gmail.com</p>
+        <p><a href="mailto:jadhavmaharu31@gmail.com" class="button">Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <a href="{{ url_for('home')}}" class="button">Go To Home</a>
+
+
+</body>
+</html>
